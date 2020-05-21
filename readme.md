@@ -1,2 +1,3 @@
 This is a test Project
-You can even [link to Google!](/SP.md)
+
+# Troubleshoot SharePoint High Trust Apps [link to Google!](/SP.md)
