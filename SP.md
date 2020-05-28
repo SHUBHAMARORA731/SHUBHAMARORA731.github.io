@@ -3,6 +3,7 @@
 Learn how to access SharePoint from mobile apps and other native device apps, and from external web applications.
 SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all run from within SharePoint, but apps on other platforms can also access SharePoint client APIs.
   
+Lorem ipsum
     
     
 
