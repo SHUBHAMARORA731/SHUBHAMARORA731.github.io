@@ -94,6 +94,7 @@ button:hover, a:hover {
 <body>
   <h1>Hackathon : Spatial Audio</h1>
   <button id="play">Start the meeting and you can hear both John doe and John day</button>
+  <button id="panningcontrol">Enable Stereo Panner</button>
   <div class="row">
     <div class="column">
   <div class="card">
@@ -164,11 +165,18 @@ button:hover, a:hover {
     <input style="visibility: Hidden" class="panning-control" type="range" min="0" max="10" step="0.1" value="5" />
     <span class="panning-value">5</span>
   </div>
+  <h2>For reference</h2>
+
+<ul>
+  <li>After starting the meeting, you should hear both John Doe and John Day</li>
+  <li>Moving mouse cursor left or right, you can increase or decrease volume of respective speaker</li>
+  <li>Try enabling stereo panner, John Doe's voice should come from left and John Day's voice from right</li>
+</ul>  
   <script>
     // We cannot initialize it now, we need to do it after some user
     // interaction.
     let audioCtx;
-
+    document.getElementById("panningcontrol").disabled = true;
     // Useful UI elements
     const audioElt = document.querySelector("audio");
     const audioR = document.querySelector("audio#rightAudio");
@@ -182,7 +190,7 @@ button:hover, a:hover {
       if (!audioCtx) {
         audioCtx = new AudioContext();
       }
-
+      document.getElementById("panningcontrol").disabled = false;
       let source = new MediaElementAudioSourceNode(audioCtx, {
         mediaElement: audioElt
       });
@@ -194,11 +202,28 @@ button:hover, a:hover {
       let panNode1 = new StereoPannerNode(audioCtx);
       panNode1.refDistance = 0.1;
       panNode1.panningModel = 'HRTF';
-      panNode1.pan.value = 1;
+    //  panNode1.pan.value = 1;
       let panNode2 = new StereoPannerNode(audioCtx);
       panNode2.refDistance = 0.1;
       panNode2.panningModel = 'HRTF';
-      panNode2.pan.value = -1;
+    //  panNode2.pan.value = -1;
+
+    document.getElementById("panningcontrol").addEventListener("click",(e) =>
+    {
+      console.log(e.target.innerHTML);
+      if(e.target.innerHTML == "Enable Stereo Panner")
+      {
+        panNode1.pan.value = 1;
+        panNode2.pan.value = -1;
+        e.target.innerHTML = "Disable Stereo Panner"
+      }else{
+        panNode1.pan.value = 0;
+        panNode2.pan.value = 0;
+        e.target.innerHTML = "Enable Stereo Panner"
+      }
+     
+
+    })
 
       let curY;
       const HEIGHT = window.innerHeight;
@@ -234,6 +259,8 @@ button:hover, a:hover {
       gainNode2.connect(audioCtx.destination);
 
     });
+  
+   
   </script>
 </body>
 
