@@ -1,40 +1,240 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="images/Azulmedia.css" type="text/css" />
-<script src="https://cdn.rawgit.com/webcomponents/webcomponentsjs/v0.7.15/webcomponents-lite.min.js"></script>
-    <link rel="import" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/build/zero-md.html">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/markdown-themes/default.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/zerodevx/zero-md/v0.2.0/highlight-themes/default.css">
-<title>Testing</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Hackathon : Spatial Audio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+audio{
+  
+  visibility: hidden;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: cadetblue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
-<div id="wrap">
-  <div id="header">
-    <h1 id="logo">Test<span class="gray">Logo</span></h1>
-    <h2 id="slogan">Put your site slogan here...</h2>
-    <div id="menu">
-      <ul>
-        <li id="current"><a href="#">Home</a></li>
-        <li><a href="/Home.html">News</a></li>
-        <li><a href="#">Downloads</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
+  <h1>Hackathon : Spatial Audio</h1>
+  <button id="play">Start the meeting and you can hear both John doe and John day</button>
+  <div class="row">
+    <div class="column">
+  <div class="card">
+    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">
+    <h1>John Doe</h1>
+    <p class="title">CEO & Founder, Example</p>
+    <p>Harvard University</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="https://intentplanning.ca/wp-content/uploads/2019/01/sample-person.jpg" alt="John" style="width:67%">
+      <h1>Shubham(You)</h1>
+      <p class="title">CEO & Founder, Example</p>
+      <p>Harvard University</p>
+      <div style="margin: 24px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+    </div>
+    </div>
+  <!-- <div style="
+  float: right;
+  padding-right: 100px;
+" class="column"> -->
+<div class="column">
+  <div class="card">
+    <img src="https://www.w3schools.com/w3images/team3.jpg" alt="John" style="width:100%">
+    <h1>John Day</h1>
+    <p class="title">CEO & Founder, Example</p>
+    <p>Harvard University</p>
+    <div style="margin: 24px 0;">
+      <a href="#"><i class="fa fa-dribbble"></i></a> 
+      <a href="#"><i class="fa fa-twitter"></i></a>  
+      <a href="#"><i class="fa fa-linkedin"></i></a>  
+      <a href="#"><i class="fa fa-facebook"></i></a> 
+    </div>
+    <p><button>Contact</button></p>
+  </div>
     </div>
   </div>
-  <zero-md file="https://raw.githubusercontent.com/SHUBHAMARORA731/SHUBHAMARORA731.github.io/master/SP.md">
-    <!-- Remember to pass in empty container of class="md-html". -->
-    <div class="md-html"></div>
-  </zero-md>
-<div id="footer-wrap">
-  <div class="footer-left">
- 
+  <audio controls id="leftAudio">
+    <source src="/innocent.mp3" type="audio/mp3" />
+    <p>This demo needs a browser supporting the &lt;audio&gt; element.</p>
+  </audio>
+  <!-- <audio controls id="rightAudio" style="float: right;">
+    <source src="/Mp3/PM_Ch2.mp3" type="audio/mp3" />
+    <p>This demo needs a browser supporting the &lt;audio&gt; element.</p>
+  </audio> -->
+  <audio controls id="rightAudio" style="float: right;">
+    <source src="/NSC_.mp3" type="audio/mp3" />
+    <p>This demo needs a browser supporting the &lt;audio&gt; element.</p>
+  </audio>
+  <div style="
+  text-align: -webkit-center;visibility: Hidden
+">
+    <h2>Set stereo panning</h2>
+    <input style="visibility: Hidden" class="panning-control" type="range" min="0" max="10" step="0.1" value="5" />
+    <span class="panning-value">5</span>
   </div>
-  <div class="footer-right">
- 
-  </div>
-</div>
+  <script>
+    // We cannot initialize it now, we need to do it after some user
+    // interaction.
+    let audioCtx;
+
+    // Useful UI elements
+    const audioElt = document.querySelector("audio");
+    const audioR = document.querySelector("audio#rightAudio");
+    const pre = document.querySelector("pre");
+
+    const panControl = document.querySelector(".panning-control");
+    const panValue = document.querySelector(".panning-value");
+    play.addEventListener("click", () => {
+      audioR.play();
+      audioElt.play();
+      if (!audioCtx) {
+        audioCtx = new AudioContext();
+      }
+
+      let source = new MediaElementAudioSourceNode(audioCtx, {
+        mediaElement: audioElt
+      });
+      source_02 = audioCtx.createMediaStreamSource(audioR.captureStream());
+
+      const gainNode1 = audioCtx.createGain();
+      const gainNode2 = audioCtx.createGain();
+
+      let panNode1 = new StereoPannerNode(audioCtx);
+      panNode1.refDistance = 0.1;
+      panNode1.panningModel = 'HRTF';
+      panNode1.pan.value = 1;
+      let panNode2 = new StereoPannerNode(audioCtx);
+      panNode2.refDistance = 0.1;
+      panNode2.panningModel = 'HRTF';
+      panNode2.pan.value = -1;
+
+      let curY;
+      const HEIGHT = window.innerHeight;
+      const Width = window.innerWidth;
+      document.onmousemove = updatePage;
+
+      function updatePage(e) {
+        curY = e.pageY;
+        curX = e.pageX;
+        gainNode1.gain.value = curX / Width * 10;
+        gainNode2.gain.value = 10 - (curX / Width * 10);
+        //      panNode.pan.value = -1;//-2 * ((curY / HEIGHT) - 0.5);
+        //    panNode2.pan.value = 1;//2 * ((curY / HEIGHT) - 0.5);
+        // gainNode1.gain.value = curY;
+
+        //  panNode.gain =  ((curY / HEIGHT));
+        // panNode2.gain = ((curY / HEIGHT) );
+      }
+      panControl.oninput = () => {
+        // panNode.pan.value = panControl.value;
+        gainNode1.gain.value = panControl.value;
+        gainNode2.gain.value = 10 - panControl.value;
+        panValue.textContent = panControl.value;
+      };
+      source.connect(panNode1);
+
+      source_02.connect(panNode2);
+
+
+      panNode2.connect(gainNode2);
+      panNode1.connect(gainNode1);
+      gainNode1.connect(audioCtx.destination);
+      gainNode2.connect(audioCtx.destination);
+
+    });
+  </script>
 </body>
+
 </html>
